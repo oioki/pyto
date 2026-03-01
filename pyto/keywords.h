@@ -2,7 +2,7 @@
 
 struct keyword
 {
-	char * lexptr;
+	const char * lexptr;
 	TOKEN token;
 };
 

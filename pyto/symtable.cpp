@@ -65,7 +65,7 @@ int SymbolTable::Lookup(char * s)
 	return 0;
 }
 
-int SymbolTable::Insert(TOKEN token, char * s)
+int SymbolTable::Insert(TOKEN token, const char * s)
 {
 	char * addr = lexemes + symlen;
 	size_t size = strlen(s);

@@ -28,7 +28,7 @@ public:
 	void	SetToken(int index, TOKEN token);
 	int		Lookup(TOKEN tok);
 	int		Lookup(char * s);
-	int		Insert(TOKEN token, char * s);
+	int		Insert(TOKEN token, const char * s);
 	void	SetVariableValue(int i, bool value);
 	void	SetVariableValue(int i, long value);
 	void	SetVariableValue(int i, double value);
