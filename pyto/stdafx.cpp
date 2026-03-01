@@ -149,6 +149,8 @@ void PrintError(const char * str)
 **********************************************************/
 {
 	printf("%s\n",PrintString(str));
+#ifdef _WIN32
 	system("PAUSE");
+#endif
 	exit(0);
 }

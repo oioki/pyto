@@ -140,7 +140,8 @@ int main(int argc, char * argv[])
 		pyto_batch(argv[1]);
 	pyto_interactive();
 
+#ifdef _WIN32
 	system("PAUSE");
-
+#endif
 	return 0;
 }

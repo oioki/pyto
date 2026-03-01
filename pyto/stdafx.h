@@ -5,10 +5,12 @@
 
 #pragma once
 
-
-#define WIN32_LEAN_AND_MEAN		// Exclude rarely-used stuff from Windows headers
+#ifdef _WIN32
+# define WIN32_LEAN_AND_MEAN		// Exclude rarely-used stuff from Windows headers
+#endif
 #include <stdio.h>
 #include <stdlib.h>
+#include <cstring>
 #include <string>
 #include <stdarg.h>
 
@@ -32,7 +34,7 @@ void	PrintError(const char * s);
 struct IntegerVariable
 {
 	TYPE	type;
-	long	fictive;  // поле только для отладочных целей
+	long	fictive;  // ???? ?????? ??? ?????????? ?????
 	long	value;
 };
 

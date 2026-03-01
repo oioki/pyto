@@ -11,7 +11,7 @@ make up your Pyto application.
 Pyto.vcproj
     This is the main project file for VC++ projects generated using an Application Wizard. 
     It contains information about the version of Visual C++ that generated the file, and 
-    information about the platforms, configurations, and project features selected with the
+    information about the platforms, configurations, and project features selected with the 
     Application Wizard.
 
 Pyto.cpp
@@ -31,3 +31,8 @@ AppWizard uses "TODO:" comments to indicate parts of the source code you
 should add to or customize.
 
 /////////////////////////////////////////////////////////////////////////////
+
+Building on Linux:
+    From the project root, run: make
+    Run the interpreter: ./build/pyto
+    Run a script: ./build/pyto example/sqrt.py

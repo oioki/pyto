@@ -24,4 +24,3 @@ void	LexAnalyzer();
 int		LexOperator();
 int		LexBrace();
 char	nextchar();
-
