@@ -26,7 +26,7 @@ public:
 	Symbol(char * lexptr, TOKEN token, ADDR addr);
 	void		Set(TOKEN token, char * addr);
 	void		Release();
-	const TYPE	GetType();
+	TYPE		GetType();
 
 	void		PrintDebug();
 	char *		PrintType();
@@ -36,9 +36,9 @@ public:
 	
 	bool		isNone();
 	bool		isUnmatched();
-	const bool		GetBooleanValue();
-	const long		GetIntegerValue();
-	const double	GetFloatValue();
+	bool		GetBooleanValue();
+	long		GetIntegerValue();
+	double		GetFloatValue();
 	SymbolListInfo & GetList();
 	int			GetCount();
 	

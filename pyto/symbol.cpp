@@ -137,7 +137,7 @@ int Symbol::GetCount()
 	return ((SymbolListInfo*)(addr))->count;
 }
 
-const bool Symbol::GetBooleanValue()
+bool Symbol::GetBooleanValue()
 {
 	if ( GetIntegerValue() == 0.0 )
 	{
@@ -149,12 +149,12 @@ const bool Symbol::GetBooleanValue()
 	}
 }
 
-const long Symbol::GetIntegerValue()
+long Symbol::GetIntegerValue()
 {
 	return ((IntegerVariable*)(addr))->value;
 }
 
-const double Symbol::GetFloatValue()
+double Symbol::GetFloatValue()
 {
 	return ((FloatVariable*)(addr))->value;
 }
@@ -164,7 +164,7 @@ SymbolListInfo & Symbol::GetList()
 	return *(SymbolListInfo*)(addr);
 }
 
-const TYPE Symbol::GetType()
+TYPE Symbol::GetType()
 {
 	if ( addr != NULL )
 		return *(TYPE*)addr;
