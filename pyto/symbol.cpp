@@ -27,7 +27,7 @@ Symbol::Symbol(char * lexptr, TOKEN token, ADDR addr)
 	}
 }
 
-// TODO: возможно, обнуление lexptr и token не требуется
+// TODO: РІРѕР·РјРѕР¶РЅРѕ, РѕР±РЅСѓР»РµРЅРёРµ lexptr Рё token РЅРµ С‚СЂРµР±СѓРµС‚СЃСЏ
 void Symbol::Release()
 {
 	if ( token == SYMLIST || ( token == NAME && addr != NULL && addr->type == TYPE_SYMLIST ) )
@@ -74,7 +74,7 @@ void Symbol::Print(bool putNewline)
 		break;
 	default:
 		putNewline = false;
-		//PrintSynError("Неизвестный символ в качестве результата");
+		//PrintSynError("РќРµРёР·РІРµСЃС‚РЅС‹Р№ СЃРёРјРІРѕР» РІ РєР°С‡РµСЃС‚РІРµ СЂРµР·СѓР»СЊС‚Р°С‚Р°");
 		break;
 	}
 	
@@ -87,7 +87,7 @@ void Symbol::PrintNumber()
 	switch ( GetType() )
 	{
 	case TYPE_NULL:
-		PrintSynError("Синтаксическая ошибка, результат неопределен");
+		PrintSynError("РЎРёРЅС‚Р°РєСЃРёС‡РµСЃРєР°СЏ РѕС€РёР±РєР°, СЂРµР·СѓР»СЊС‚Р°С‚ РЅРµРѕРїСЂРµРґРµР»РµРЅ");
 		break;
 	case TYPE_BOOLEAN:
 		if ( GetBooleanValue() == true )
@@ -215,7 +215,7 @@ void Symbol::SetVariableValue(SymbolListInfo & psli)
 	addrInteger->end = psli.end;
 	addrInteger->count = psli.count;
 
-	// TODO: скопировать?
+	// TODO: СЃРєРѕРїРёСЂРѕРІР°С‚СЊ?
 }
 
 void Symbol::SetVariableEqValue(double value)

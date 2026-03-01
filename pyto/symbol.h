@@ -19,9 +19,9 @@ typedef struct TYPEUNION
 class Symbol
 {
 public:
-	char *	lexptr;		// указатель на символьное представление в массиве символов
-	TOKEN	token;		// токен - род символа
-	TYPEUNION*	addr;		// адрес на дополнительную информацию (атрибуты)
+	char *	lexptr;		// СѓРєР°Р·Р°С‚РµР»СЊ РЅР° СЃРёРјРІРѕР»СЊРЅРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ РІ РјР°СЃСЃРёРІРµ СЃРёРјРІРѕР»РѕРІ
+	TOKEN	token;		// С‚РѕРєРµРЅ - СЂРѕРґ СЃРёРјРІРѕР»Р°
+	TYPEUNION*	addr;		// Р°РґСЂРµСЃ РЅР° РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅСѓСЋ РёРЅС„РѕСЂРјР°С†РёСЋ (Р°С‚СЂРёР±СѓС‚С‹)
 	Symbol();
 	Symbol(char * lexptr, TOKEN token, ADDR addr);
 	void		Set(TOKEN token, char * addr);

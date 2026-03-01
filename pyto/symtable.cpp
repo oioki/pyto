@@ -71,9 +71,9 @@ int SymbolTable::Insert(TOKEN token, char * s)
 	size_t size = strlen(s);
 
 	if ( symcnt+1 >= MAXSYMCNT )
-		PrintError("Таблица символов переполнена");
+		PrintError("РўР°Р±Р»РёС†Р° СЃРёРјРІРѕР»РѕРІ РїРµСЂРµРїРѕР»РЅРµРЅР°");
 	if ( symlen+size+1 >= MAXSYMLEN )
-		PrintError("Массив лексем переполнен");
+		PrintError("РњР°СЃСЃРёРІ Р»РµРєСЃРµРј РїРµСЂРµРїРѕР»РЅРµРЅ");
 
 	symtable[symcnt].Set(token,addr);
 	strcpy(addr,s);

@@ -22,7 +22,7 @@ void SymbolStream::Match(TOKEN token)
 	}
 	else
 	{
-		//PrintSynError("Йоптваюмать!");
+		//PrintSynError("Р™РѕРїС‚РІР°СЋРјР°С‚СЊ!");
 	}
 }
 

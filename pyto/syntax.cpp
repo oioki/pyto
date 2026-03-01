@@ -85,8 +85,8 @@ NAME | NUMBER
 	}
 
 	{
-		//PushSynError("atom(): Ожидалась константа или идентификатор");
-		//PrintSynError("atom(): Ожидалась константа или идентификатор");
+		//PushSynError("atom(): РћР¶РёРґР°Р»Р°СЃСЊ РєРѕРЅСЃС‚Р°РЅС‚Р° РёР»Рё РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ");
+		//PrintSynError("atom(): РћР¶РёРґР°Р»Р°СЃСЊ РєРѕРЅСЃС‚Р°РЅС‚Р° РёР»Рё РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ");
 		return symUnmatched;
 	}
 }
@@ -304,7 +304,7 @@ expr (comp_op expr)*
 	{
 		if ( ret.addr == NULL )
 		{
-			PrintSynError("Значение операнда не определено.");
+			PrintSynError("Р—РЅР°С‡РµРЅРёРµ РѕРїРµСЂР°РЅРґР° РЅРµ РѕРїСЂРµРґРµР»РµРЅРѕ.");
 			return symUnmatched;
 		}
 
@@ -316,7 +316,7 @@ expr (comp_op expr)*
 		stream.Match(op);
 		right = expr();
 
-		// если result = истина, то стоит проверять дальнейшие условия
+		// РµСЃР»Рё result = РёСЃС‚РёРЅР°, С‚Рѕ СЃС‚РѕРёС‚ РїСЂРѕРІРµСЂСЏС‚СЊ РґР°Р»СЊРЅРµР№С€РёРµ СѓСЃР»РѕРІРёСЏ
 		if ( result == true )
 		{
 			result = OpComparisonGeneral(left,right,op);
@@ -408,7 +408,7 @@ test (',' test)* [',']
 	if ( element.isUnmatched() )
 		return element;
 
-	Symbol list(NULL,SYMLIST,NULL); // TODO:деструктор
+	Symbol list(NULL,SYMLIST,NULL); // TODO:РґРµСЃС‚СЂСѓРєС‚РѕСЂ
 	list.Insert(element);
 
 	TOKEN la = stream.Look();
@@ -724,10 +724,10 @@ simple_stmt |
 compound_stmt NEWLINE
 ***********************************************************************/
 {
-	// проверка на 'bye' - выход из программы
+	// РїСЂРѕРІРµСЂРєР° РЅР° 'bye' - РІС‹С…РѕРґ РёР· РїСЂРѕРіСЂР°РјРјС‹
 	if ( strncmp(lineinput,"bye",3) == 0 )
 	{
-		printf(PrintString("Доброго здоровья и всего наилучшего."));
+		printf(PrintString("Р”РѕР±СЂРѕРіРѕ Р·РґРѕСЂРѕРІСЊСЏ Рё РІСЃРµРіРѕ РЅР°РёР»СѓС‡С€РµРіРѕ."));
 		exit(0);
 	}
 
